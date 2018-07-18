@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.mtecresults.clockcontrol.domain;
+
+message StatusMessage {
+    string mac = 1;
+    int32 battery = 2;
+    int32 protocol_version = 3;
+    int32 port = 4;
+    string display_value = 5;
+    string ip = 6;
+    NtpStatus ntpStatus = 7;
+    string softwareRevision = 8;
+
+    message NtpStatus {
+        bool hasSync = 1;
+        int32 accurateWithinMs = 2;
+    }
+}

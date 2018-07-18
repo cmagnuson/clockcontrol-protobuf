@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package com.mtecresults.clockcontrol.domain;
+
+message SettingMessage {
+    oneof setting {
+        ClockTime clocktime = 1;
+        Text text = 2;
+        GunshotTime gunshotTime = 3;
+    }
+
+    message ClockTime {
+        int64 time = 1;
+        bool countUp = 2;
+        string label = 3;
+    }
+
+    message GunshotTime {
+        int64 timeUtc = 1;
+        string label = 2;
+    }
+
+    message Text {
+        string message = 1;
+    }
+}
