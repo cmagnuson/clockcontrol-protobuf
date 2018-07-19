@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.mtecresults.clockcontrol.domain;
+package com.mtecresults.clockcontrol.domain.proto;
 
 message StatusMessage {
     string mac = 1;
